@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>三方比較：台北 vs 新北現行 vs 新北未來｜EMTP SOP</title>
+<meta name="description" content="臺北市現行 vs 新北市現行(113) vs 新北市未來(115草稿) 到院前救護SOP 三方比較，聚焦小兒與小兒OHCA">
+<style>
+:root{--bar:#4a3b8c;--bg:#eceaf2;--ink:#1c2733;--acc:#4a3b8c;--card:#fff;--tp:#8a1538;--n0:#a33;--n1:#1d6a4c}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+header{position:sticky;top:0;background:var(--bar);color:#fff;padding:10px 14px;z-index:10;box-shadow:0 1px 4px rgba(0,0,0,.25);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+header h1{font-size:15.5px;margin:0;font-weight:600;flex:1;min-width:170px}
+header a{color:#fff;font-size:12px;text-decoration:none;border:1px solid rgba(255,255,255,.55);border-radius:6px;padding:4px 8px;white-space:nowrap}
+main{max-width:1000px;margin:0 auto;padding:14px 12px 60px}
+.disclaimer{background:#fff7e6;border:1px solid #e6a817;border-radius:10px;padding:11px 15px;font-size:13px;margin:10px 0 16px}
+.disclaimer b{color:#a06500}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;margin:0 0 16px;padding:8px 14px;background:var(--card);border-radius:10px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.dot{width:11px;height:11px;border-radius:3px;display:inline-block}
+.d-tp{background:#8a1538}.d-n0{background:#b06a1e}.d-n1{background:#1d6a4c}
+nav.toc{background:var(--card);border-radius:12px;padding:10px 16px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+nav.toc a{display:inline-block;margin:3px 9px 3px 0;font-size:13px;color:var(--acc);text-decoration:none;border-bottom:1px dotted #a49cc4}
+h2{font-size:18px;color:var(--acc);border-left:5px solid var(--acc);padding-left:10px;margin:28px 0 8px}
+.card{background:var(--card);border-radius:12px;padding:6px 4px;margin:10px 0;box-shadow:0 1px 4px rgba(0,0,0,.08);overflow-x:auto}
+.hi{background:#f6ecfb;border:1px solid #cbb6e0;border-radius:12px;padding:8px 16px 16px;margin:14px 0 22px}
+.hi h2{border:none;color:#5a2d82;margin-top:10px}
+table{border-collapse:collapse;font-size:13px;width:100%;min-width:640px}
+th,td{border:1px solid #d5d0e2;padding:7px 9px;text-align:left;vertical-align:top}
+thead th{background:#efeaf6;font-size:12.5px}
+th.item{width:22%;background:#f3f0f8;font-weight:600}
+th.tp{background:#f7e9ee;color:#8a1538}th.n0{background:#f6ecdf;color:#8a5316}th.n1{background:#e7f2ec;color:#12583c}
+td.tp{background:#fdf7f9}td.n0{background:#fdf9f2}td.n1{background:#f4faf6}
+b.hl{color:#b02a2a}
+.same{color:#7a8a80;font-weight:600}
+.no{color:#b02a2a;font-weight:700}.yes{color:#1d6a4c;font-weight:700}.warn{color:#b06a1e;font-weight:700}
+.note{font-size:12px;color:#777;margin:4px 2px 0}
+p{font-size:14px}
+footer{max-width:1000px;margin:0 auto;padding:0 12px 40px;font-size:12px;color:#7c8894}
+.k{font-size:11px;background:#ece7f5;color:#4a3b8c;border-radius:5px;padding:1px 6px;font-weight:600;white-space:nowrap}
+</style>
+</head>
+<body>
+<header>
+ <h1>⚖️ 三方比較（聚焦小兒）</h1>
+ <a href="index.html">新北全書</a>
+ <a href="https://limzijiang.github.io/taipei-emtp-sop/">台北全書</a>
+ <a href="pediatric-updates.html">新北小兒更新</a>
+</header>
+<main>
+
+<div class="disclaimer">
+⚠️ 三方定義：<b>台北現行</b>＝臺北市EMTP作業程序手冊第五版；<b>新北現行</b>＝新北市113(2024)定本；<b>新北未來</b>＝新北市115(2026)修訂<b>草稿</b>（尚未定稿，含表格與說明矛盾處）。本頁為非官方整理，數值以各市正式公告為準。「新北未來」缺 O/A 章節原文，該處以現行值標註。
+</div>
+
+<div class="legend">
+ <b style="font-size:12.5px">欄位：</b>
+ <span><i class="dot d-tp"></i>台北現行(第五版)</span>
+ <span><i class="dot d-n0"></i>新北現行(113)</span>
+ <span><i class="dot d-n1"></i>新北未來(115草稿)</span>
+</div>
+
+<nav class="toc">
+ <b style="font-size:12.5px">跳轉：</b>
+ <a href="#ohca">🔴 小兒 OHCA（骨針/腎上腺素）</a>
+ <a href="#age">年齡定義</a>
+ <a href="#crit">小兒危急個案判定</a>
+ <a href="#cpr">小兒/嬰兒 CPR・去顫</a>
+ <a href="#neo">新生兒</a>
+ <a href="#drug">小兒用藥</a>
+ <a href="#shock">休克輸液・低血糖</a>
+ <a href="#triage">JumpSTART・燒傷</a>
+</nav>
+
+<section id="ohca" class="hi">
+<h2>🔴 重點問題：小兒 OHCA — 可以打骨針嗎？可以給 epinephrine 嗎？有劑量嗎？</h2>
+<div class="card"><table>
+<thead><tr><th class="item">問題</th><th class="tp">台北現行</th><th class="n0">新北現行(113)</th><th class="n1">新北未來(115)</th></tr></thead>
+<tbody>
+<tr>
+ <th class="item">① 小兒可打骨針(IO)？</th>
+ <td class="tp"><span class="yes">✅ 可</span>，<b>無年齡限制</b>。骨內注射列為 P 級技術（附錄VII），T6壓砸傷明訂可用</td>
+ <td class="n0"><span class="no">❌ 不可</span>。G8 必要條件「年齡<b>須大於18歲</b>」→ 小兒排除，只能周邊IV</td>
+ <td class="n1"><span class="warn">⚠️ 幼童仍不可</span>。改「>18歲<b>或有第二性徵</b>」→ 只有發育中青少年可，嬰幼兒排除</td>
+</tr>
+<tr>
+ <th class="item">② 可給 epinephrine？</th>
+ <td class="tp"><span class="yes">✅ 可</span>。M1流程「Epinephrine每3-5分鐘重複給予」(P級)</td>
+ <td class="n0"><span class="yes">✅ 可</span>。M1註10，小兒經S6轉入M1</td>
+ <td class="n1"><span class="yes">✅ 可</span>。同113</td>
+</tr>
+<tr>
+ <th class="item">③ 有註明劑量？</th>
+ <td class="tp"><span class="no">❌ 完全沒寫</span>劑量（無mg、無mg/kg；對比Amiodarone有寫300/150mg）</td>
+ <td class="n0"><span class="warn">⚠️ 只有成人1mg</span>（每3~5分鐘1mg IV/IO），<b>無小兒體重劑量</b></td>
+ <td class="n1"><span class="warn">⚠️ 同113</span>，只有成人1mg</td>
+</tr>
+</tbody></table></div>
+<p style="font-size:13.5px"><b>臨床落差：</b>真的遇到幼兒 OHCA——在<b>新北</b>骨針被 G8 年齡條件擋住、周邊IV又難建，可能<b>沒有被授權的血管路徑</b>可給藥；在<b>台北</b>骨針打得了，但 epinephrine <b>要給多少沒有依據</b>。<b class="hl">三版都沒有小兒 OHCA 的 epinephrine 0.01 mg/kg 這個關鍵劑量</b>，是共同空白。（提醒：台北M1雖題為「成人無脈搏」，但CPR對照表含兒童/嬰兒欄、且無獨立小兒無脈搏流程，故小兒OHCA實務走M1。）</p>
+</section>
+
+<h2 id="age">小兒年齡定義</h2>
+<div class="card"><table>
+<thead><tr><th class="item">項目</th><th class="tp">台北現行</th><th class="n0">新北現行(113)</th><th class="n1">新北未來(115)</th></tr></thead>
+<tbody>
+<tr><th class="item">小兒/成人分界</th>
+<td class="tp">依章節不同：危急個案(G5-2)＝<18歲或未有第二性徵；小兒通用(S8)＝<b>8歲以下或25kg以下</b>；JumpSTART<8歲</td>
+<td class="n0">青春期（第二性徵）以下為兒童（新生兒除外）</td>
+<td class="n1"><b>明確年齡表</b>：嬰兒1月–1歲、兒童1–未滿12歲、青少年12–未滿18、成人≧18</td></tr>
+<tr><th class="item">新生兒</th><td class="tp">出生–1個月</td><td class="n0">出生–1個月</td><td class="n1">出生–1個月</td></tr>
+</tbody></table></div>
+<p class="note">台北採「8歲/25kg」實用分界（貼近PALS），新北未來採明確歲數分層。</p>
+
+<h2 id="crit">小兒危急個案判定</h2>
+<div class="card"><table>
+<thead><tr><th class="item">項目</th><th class="tp">台北現行（G5-2 專章）</th><th class="n0">新北現行(113)</th><th class="n1">新北未來(115)</th></tr></thead>
+<tbody>
+<tr><th class="item">架構</th><td class="tp"><b>有獨立「小兒危急個案」專頁</b>，數值依年齡細分</td><td class="n0" colspan="2" style="text-align:center">新北為 G5 成人小兒<b>合併</b>一頁，小兒主要以「評估三角(PAT)異常」判定 <span class="k">115：明確為「三角異常」</span></td></tr>
+<tr><th class="item">脈搏(依年齡)</th><td class="tp"><3月：<110或≧170<br>3月–3歲：<90或≧150<br>≧3歲：<60或≧130（次/分）</td><td class="n0">未細分年齡（走三角評估）</td><td class="n1">未細分年齡（走三角評估）</td></tr>
+<tr><th class="item">收縮壓</th><td class="tp">< [70+(2×年齡)] mmHg</td><td class="n0" colspan="2" style="text-align:center"><span class="same">同：<70+(2×年齡)；<1歲<70；>10歲<90（S6）</span></td></tr>
+<tr><th class="item">SpO₂/體溫/血糖</th><td class="tp">未給氧SpO₂<94%；體溫≧40或<36℃；血糖<60或≧500</td><td class="n0" colspan="2" style="text-align:center">新北G5為成人標準（新未來符號≧改>）；小兒另參S6</td></tr>
+</tbody></table></div>
+
+<h2 id="cpr">小兒/嬰兒 CPR 與去顫能量</h2>
+<div class="card"><table>
+<thead><tr><th class="item">項目</th><th class="tp">台北現行</th><th class="n0">新北現行(113)</th><th class="n1">新北未來(115)</th></tr></thead>
+<tbody>
+<tr><th class="item">按壓深度</th><td class="tp">兒童約5cm、嬰兒約4cm（前後徑1/3）</td><td class="n0" colspan="2" style="text-align:center"><span class="same">同（兒童約5cm、嬰兒約4cm）</span></td></tr>
+<tr><th class="item">壓吹比</th><td class="tp">30:2（單人）/15:2（雙人）</td><td class="n0" colspan="2" style="text-align:center"><span class="same">同 30:2 / 15:2</span></td></tr>
+<tr><th class="item">脈搏檢查</th><td class="tp">1歲以上頸/股動脈、1歲以下肱/股動脈</td><td class="n0" colspan="2" style="text-align:center"><span class="same">同</span></td></tr>
+<tr><th class="item">小兒去顫能量</th><td class="tp"><span class="warn">未寫 J/kg</span>（僅規定兒童貼片；能量「依機型」）</td><td class="n0"><b>2 J/kg</b>起、至多10 J/kg（1個月以上）</td><td class="n1"><span class="same">同 2→10 J/kg</span></td></tr>
+</tbody></table></div>
+<p class="note">新北明訂小兒去顫 2 J/kg（至多10）；台北僅規定貼片選擇、未給 J/kg。</p>
+
+<h2 id="neo">新生兒（S5/S7）</h2>
+<div class="card"><table>
+<thead><tr><th class="item">項目</th><th class="tp">台北現行</th><th class="n0">新北現行(113)</th><th class="n1">新北未來(115)</th></tr></thead>
+<tbody>
+<tr><th class="item">心跳分層</th><td class="tp">≧100正常；<100用BVM；<60做CPR</td><td class="n0" colspan="2" style="text-align:center"><span class="same">同 100 / 60 分層</span></td></tr>
+<tr><th class="item">CPR比例</th><td class="tp">3:1（90按壓+30通氣，30秒週期）</td><td class="n0" colspan="2" style="text-align:center"><span class="same">同 3:1 / 90+30</span></td></tr>
+<tr><th class="item">單人按壓手法</th><td class="tp">雙拇指環抱，<b>或1手2指法</b></td><td class="n0">雙拇指環抱，或<b>單手兩指法</b></td><td class="n1">雙拇指環抱，或<b class="hl">單手掌根</b>（兩指法→掌根）</td></tr>
+<tr><th class="item">SpO₂逐分鐘目標表</th><td class="tp"><span class="warn">未提供此表</span></td><td class="n0"><b>有</b>（1分60-65%…10分85-95%）</td><td class="n1"><span class="same">有（同113）</span></td></tr>
+<tr><th class="item">通氣壓力上限</th><td class="tp"><span class="warn">未提</span></td><td class="n0"><b>早產30/足月40 cmH₂O</b></td><td class="n1"><span class="same">同</span></td></tr>
+<tr><th class="item">斷臍時機</th><td class="tp">雙夾各離5-10cm，<b>未明訂等待時間</b></td><td class="n0">產出後<b>30秒</b></td><td class="n1">產出後<b class="hl">60秒</b>（延遲斷臍）</td></tr>
+<tr><th class="item">Apgar</th><td class="tp">1及5分鐘評估</td><td class="n0" colspan="2" style="text-align:center"><span class="same">同</span></td></tr>
+</tbody></table></div>
+<p class="note">新北新生兒段較詳（SpO₂目標表、通氣壓力上限），台北此二項未提。斷臍：新北未來最晚(60秒)。</p>
+
+<h2 id="drug">小兒用藥（抽搐・過敏）</h2>
+<div class="card"><table>
+<thead><tr><th class="item">項目</th><th class="tp">台北現行</th><th class="n0">新北現行(113)</th><th class="n1">新北未來(115)</th></tr></thead>
+<tbody>
+<tr><th class="item">抽搐 Midazolam 小兒</th><td class="tp"><span class="no">無小兒劑量</span>（僅成人/青少年5mg，上限10mg）</td><td class="n0"><span class="no">無小兒劑量</span>（僅成人≧18歲5mg）</td><td class="n1"><b class="hl">兒童及嬰兒 0.2 mg/kg IM（單次上限5mg）</b> ← 三版唯一有小兒劑量</td></tr>
+<tr><th class="item">過敏 Epinephrine 小兒</th><td class="tp"><b>0.01 mg/kg（至多0.3mg）IM</b></td><td class="n0"><b>0.01 mg/kg（至多0.3mg）IM</b></td><td class="n1"><b>0.01 mg/kg（至多0.3mg）IM</b></td></tr>
+<tr><th class="item">過敏 成人劑量</th><td class="tp">0.3mg IM</td><td class="n0">0.3–0.5mg IM</td><td class="n1">0.3–0.5mg（成人與青少年）</td></tr>
+</tbody></table></div>
+<p class="note"><b>最關鍵差異：</b>小兒抽搐用藥只有<b>新北未來</b>寫出小兒劑量(0.2mg/kg)；台北與新北現行都只有成人劑量。小兒過敏 epinephrine 三版一致(0.01mg/kg)。</p>
+
+<h2 id="shock">小兒休克輸液・低血糖</h2>
+<div class="card"><table>
+<thead><tr><th class="item">項目</th><th class="tp">台北現行</th><th class="n0">新北現行(113)</th><th class="n1">新北未來(115)</th></tr></thead>
+<tbody>
+<tr><th class="item">休克輸液</th><td class="tp"><span class="warn">未提 ml/kg</span></td><td class="n0"><b>10–20 mL/kg</b></td><td class="n1"><span class="same">同 10–20 mL/kg</span></td></tr>
+<tr><th class="item">低血糖治療</th><td class="tp"><span class="warn">無小兒kg方案</span>（僅成人D50W/D10W）</td><td class="n0"><b>D25W 2mL/kg 或 D10W 5mL/kg</b></td><td class="n1"><span class="same">同</span></td></tr>
+</tbody></table></div>
+<p class="note">小兒休克補液與低血糖 per-kg 劑量：新北兩版有，台北未提供小兒專屬方案。</p>
+
+<h2 id="triage">JumpSTART 檢傷・小兒燒傷</h2>
+<div class="card"><table>
+<thead><tr><th class="item">項目</th><th class="tp">台北現行</th><th class="n0">新北現行(113)</th><th class="n1">新北未來(115)</th></tr></thead>
+<tbody>
+<tr><th class="item">JumpSTART 呼吸界線</th><td class="tp">14–45 次/分；無呼吸有脈搏→給5次人工呼吸</td><td class="n0" colspan="2" style="text-align:center"><span class="same">同 14–45；無呼吸有脈搏給5次人工呼吸</span></td></tr>
+<tr><th class="item">小兒燒傷輸液</th><td class="tp"><b>兒童/嬰兒 3mL×kg×%</b>（成人2、電傷4）</td><td class="n0" colspan="2" style="text-align:center">新北T/S以TXA與休克輸液為主，未列此分齡燒傷輸液公式</td></tr>
+<tr><th class="item">燒傷九法則(嬰兒)</th><td class="tp">頭頸18%、每下肢13.5%</td><td class="n0" colspan="2" style="text-align:center"><span class="same">同（嬰兒頭頸18%、下肢13.5%）</span></td></tr>
+</tbody></table></div>
+
+<h2>一句話總結</h2>
+<div class="card" style="padding:12px 18px">
+<ul style="font-size:14px;line-height:1.8">
+<li><b>小兒血管路徑（骨針）</b>：台北最寬（不限齡）＞新北未來（青少年可）＞新北現行（一律禁<18歲）。</li>
+<li><b>小兒抽搐劑量</b>：只有<b>新北未來</b>寫出（Midazolam 0.2mg/kg）；另兩版空白。</li>
+<li><b>新生兒細節</b>（SpO₂目標表、通氣壓力上限、休克/低血糖 per-kg）：<b>新北</b>兩版較完整；台北多處未提。</li>
+<li><b>小兒 OHCA epinephrine 劑量</b>：三版皆未寫小兒劑量——<b>共同空白</b>。</li>
+<li><b>台北獨有</b>：小兒危急個案有獨立專頁與分齡脈搏閾值；分齡燒傷輸液公式。</li>
+</ul>
+</div>
+
+</main>
+<footer>非官方整理，供學習與內部討論。三方皆可能改版，臨床以各市正式公告定稿及醫療指導醫師指示為準。整理日期：2026-07-03。</footer>
+</body>
+</html>
