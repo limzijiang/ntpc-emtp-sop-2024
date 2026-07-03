@@ -55,14 +55,21 @@ body.reflow #fsgrp{display:inline-flex}
 /* reflow (EPUB-like) mode — scoped under .page so body.reflow class never self-hides */
 .page .reflow{display:none}
 body.reflow .page{max-width:780px;background:#fff;padding:24px 28px 34px}
-body.reflow .page img{display:none}
+body.reflow .page:not(.gpage) img{display:none}
+body.reflow .page.gpage{padding:14px 14px 20px}
+body.reflow .page.gpage img{display:block;border:1px solid #e2e8ef;border-radius:4px}
 body.reflow .page .reflow{display:block}
 body.reflow .pnum{position:static;display:inline-block;margin-top:16px;background:#8895a3}
+body.reflow .page.gpage .pnum{display:none}
 .page .reflow h2{font-size:calc(var(--fs) + 5px);color:var(--acc);margin:.1em 0 .7em;font-weight:700;border-bottom:2px solid #e0e8f0;padding-bottom:.25em}
 .page .reflow h3.note{font-size:calc(var(--fs) + 1px);color:#b45f06;margin:1.1em 0 .3em;font-weight:700}
 .page .reflow p{font-size:var(--fs);line-height:1.95;margin:.5em 0;text-align:justify;letter-spacing:.01em}
-.page .reflow .rfnote{font-size:12px;color:#98785a;background:#fbf3e8;border-left:3px solid #e0b070;border-radius:4px;padding:6px 10px;margin:.6em 0 1em;line-height:1.6}
-@media (max-width:900px){body.reflow .page{padding:16px 15px 24px}}
+.page .reflow .gcap{font-size:12.5px;color:#5a6b7a;margin:10px 2px 0;font-weight:600}
+.page .reflow .gtext{margin-top:6px;font-size:13px}
+.page .reflow .gtext summary{cursor:pointer;color:var(--acc);font-size:12.5px;padding:4px 0}
+.page .reflow .gtext p,.page .reflow .gtext h2,.page .reflow .gtext h3{font-size:13px;line-height:1.7;color:#5f6b78}
+.page .reflow .gtext h2{border:none;font-size:14px}
+@media (max-width:900px){body.reflow .page{padding:16px 15px 24px}body.reflow .page.gpage{padding:10px 8px 16px}}
 </style>
 </head>
 <body>
@@ -78,6 +85,8 @@ body.reflow .pnum{position:static;display:inline-block;margin-top:16px;backgroun
 <aside id="sidebar">
  <input id="search" type="search" placeholder="全文搜尋（例：氣胸、TXA、電擊）">
  <div id="results"></div>
+ <a href="updates.html" style="display:block;background:#e6f2ec;border:1px solid #1d6a4c;border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:13.5px;font-weight:600;color:#1d6a4c;text-decoration:none">🔄 115年新版更新摘要</a>
+ <a href="pediatric-updates.html" style="display:block;background:#fbeede;border:1px solid #c26a00;border-radius:8px;padding:8px 10px;margin-bottom:6px;font-size:13.5px;font-weight:600;color:#a85400;text-decoration:none">🧒 小兒更新重點（新舊差異）</a>
  <a href="pediatric.html" style="display:block;background:#fff3e0;border:1px solid #e6a817;border-radius:8px;padding:8px 10px;margin-bottom:8px;font-size:13.5px;font-weight:600;color:#8a5a00;text-decoration:none">🧒 小兒重點整理（劑量／CPR／新生兒）</a>
  <nav><a class="leaf l0" href="#p2">目錄<span class="pg">2</span></a>
 <details open><summary>通用流程（G）<a class="golink" href="#p4">p.4</a></summary>
@@ -585,14 +594,23 @@ async function loadReflow(){
  if(reflowLoaded)return;
  const data=await (await fetch('reflow.json')).json();
  document.querySelectorAll('.page').forEach(sec=>{
-  const items=data[(+sec.dataset.n)-1]||[];
-  const div=document.createElement('div');div.className='reflow';
-  div.innerHTML=items.map(([t,s])=>{
+  const entry=data[(+sec.dataset.n)-1]||[0,[]];
+  const graphic=entry[0], items=entry[1]||[];
+  const textHtml=items.map(([t,s])=>{
    const e=esc(s);
    if(t==='h')return '<h2>'+e+'</h2>';
    if(t==='n')return '<h3 class="note">'+e+'</h3>';
    return '<p>'+e+'</p>';
-  }).join('')+'<div class="rfnote">⚠️ 文字版由 PDF 自動擷取重排，流程圖頁的方塊文字順序可能錯亂；判讀流程圖請切換回「原書版」。本頁 = 原書第 '+sec.dataset.n+' 頁。</div>';
+  }).join('');
+  const div=document.createElement('div');div.className='reflow';
+  if(graphic){
+   // 流程圖／表單頁：原頁圖片直接內嵌於文字流，文字收合供搜尋/複製
+   sec.classList.add('gpage');
+   div.innerHTML='<div class="gcap">📊 原書第 '+sec.dataset.n+' 頁（流程圖／表單）</div>'
+     +'<details class="gtext"><summary>展開此頁文字（供搜尋、複製）</summary>'+textHtml+'</details>';
+  }else{
+   div.innerHTML=textHtml;
+  }
   sec.appendChild(div);
  });
  reflowLoaded=true;
