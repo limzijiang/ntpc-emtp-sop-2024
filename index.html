@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新北市EMTP SOP 2024 線上版</title>
+<meta name="description" content="新北市政府消防局緊急傷病患作業程序（2024）線上瀏覽版，含完整目錄導覽與全文搜尋">
+<style>
+:root{--bar:#0f4c81;--bg:#e9edf2;--side:#ffffff;--ink:#1c2733;--acc:#0f4c81;--hl:#e8f1fa}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink)}
+header{position:fixed;top:0;left:0;right:0;height:52px;background:var(--bar);color:#fff;display:flex;align-items:center;gap:10px;padding:0 12px;z-index:30;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+header h1{font-size:15px;margin:0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+#cursec{font-size:12px;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40vw}
+#menubtn{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:4px 6px;line-height:1}
+#pdfbtn{color:#fff;text-decoration:none;font-size:12px;border:1px solid rgba(255,255,255,.6);border-radius:6px;padding:4px 8px;white-space:nowrap}
+#sidebar{position:fixed;top:52px;bottom:0;left:0;width:320px;background:var(--side);overflow-y:auto;padding:10px 8px 40px;z-index:25;border-right:1px solid #d5dbe2;transition:transform .2s;-webkit-overflow-scrolling:touch}
+#main{margin-left:320px;padding:64px 8px 40px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.page{position:relative;width:100%;max-width:900px;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.15);border-radius:4px;overflow:hidden}
+.page img{display:block;width:100%;height:auto}
+.pnum{position:absolute;right:8px;bottom:6px;background:rgba(15,76,129,.75);color:#fff;font-size:11px;padding:2px 7px;border-radius:10px}
+#search{width:100%;padding:8px 10px;border:1px solid #c8d0d9;border-radius:8px;font-size:14px;margin-bottom:8px}
+#results{margin-bottom:8px}
+#results a{display:block;padding:7px 8px;border-radius:6px;text-decoration:none;color:var(--ink);font-size:12.5px;line-height:1.45;border-bottom:1px solid #eef1f4}
+#results a b{color:var(--acc)}
+#results a:hover{background:var(--hl)}
+#results .rp{color:var(--acc);font-weight:600}
+nav details{margin:2px 0}
+nav summary{cursor:pointer;font-weight:600;font-size:13.5px;padding:6px 6px;border-radius:6px;display:flex;align-items:center;gap:6px;list-style:none}
+nav summary::before{content:"▸";font-size:10px;transition:transform .15s;color:#8895a3}
+nav details[open]>summary::before{transform:rotate(90deg)}
+nav summary:hover{background:var(--hl)}
+nav .golink{margin-left:auto;font-size:11px;color:#8895a3;text-decoration:none;font-weight:400}
+nav details>details, nav details>a.leaf{margin-left:14px}
+a.leaf{display:flex;padding:5px 6px;font-size:12.5px;color:var(--ink);text-decoration:none;border-radius:6px;line-height:1.4;gap:6px}
+a.leaf .pg{margin-left:auto;color:#98a3af;font-size:11px}
+a.leaf:hover{background:var(--hl)}
+a.leaf.cur, nav summary.cur{background:var(--acc);color:#fff}
+a.leaf.cur .pg,nav summary.cur .golink{color:#dce8f3}
+#dim{display:none}
+@media (max-width:900px){
+ #sidebar{transform:translateX(-105%);width:min(84vw,330px);box-shadow:2px 0 12px rgba(0,0,0,.2)}
+ body.nav #sidebar{transform:none}
+ body.nav #dim{display:block;position:fixed;inset:52px 0 0 0;background:rgba(0,0,0,.35);z-index:20}
+ #main{margin-left:0;padding:60px 4px 30px}
+ #cursec{display:none}
+}
+#totop{position:fixed;right:14px;bottom:18px;width:42px;height:42px;border-radius:50%;border:none;background:var(--bar);color:#fff;font-size:18px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .2s;z-index:15}
+body.scrolled #totop{opacity:.9;pointer-events:auto}
+</style>
+</head>
+<body>
+<header>
+ <button id="menubtn" aria-label="目錄">☰</button>
+ <h1>新北市EMTP SOP 2024</h1>
+ <span id="cursec"></span>
+ <a id="pdfbtn" href="New_Taipei_EMTP_SOP_2024_bookmarked.pdf" download>下載PDF</a>
+</header>
+<div id="dim"></div>
+<aside id="sidebar">
+ <input id="search" type="search" placeholder="全文搜尋（例：氣胸、TXA、電擊）">
+ <div id="results"></div>
+ <nav><a class="leaf l0" href="#p2">目錄<span class="pg">2</span></a>
+<details open><summary>通用流程（G）<a class="golink" href="#p4">p.4</a></summary>
+<details><summary>G1 通用流程<a class="golink" href="#p4">p.4</a></summary>
+<a class="leaf l2" href="#p4">五大通用程序總覽與現場對應關係圖<span class="pg">4</span></a>
+</details>
+<details><summary>G2 現場評估流程<a class="golink" href="#p5">p.5</a></summary>
+<a class="leaf l2" href="#p5">流程圖<span class="pg">5</span></a>
+<a class="leaf l2" href="#p6">要旨與註解<span class="pg">6</span></a>
+<a class="leaf l2" href="#p7">多重傷病患檢傷方法<span class="pg">7</span></a>
+</details>
+<details><summary>G3 非創傷流程<a class="golink" href="#p8">p.8</a></summary>
+<a class="leaf l2" href="#p8">流程圖<span class="pg">8</span></a>
+<a class="leaf l2" href="#p9">要旨與註解<span class="pg">9</span></a>
+</details>
+<details><summary>G4 創傷流程<a class="golink" href="#p11">p.11</a></summary>
+<a class="leaf l2" href="#p11">流程圖<span class="pg">11</span></a>
+<a class="leaf l2" href="#p12">要旨與註解<span class="pg">12</span></a>
+<a class="leaf l2" href="#p13">重大創傷機轉與危急創傷判定條件<span class="pg">13</span></a>
+</details>
+<details><summary>G5 危急個案<a class="golink" href="#p15">p.15</a></summary>
+<a class="leaf l2" href="#p15">危急個案定義表<span class="pg">15</span></a>
+<a class="leaf l2" href="#p17">要旨與註解<span class="pg">17</span></a>
+</details>
+<details><summary>G6 車內照護流程<a class="golink" href="#p18">p.18</a></summary>
+<a class="leaf l2" href="#p18">流程圖<span class="pg">18</span></a>
+<a class="leaf l2" href="#p19">要旨與註解<span class="pg">19</span></a>
+</details>
+<details><summary>G7 到院傷病患交接流程<a class="golink" href="#p21">p.21</a></summary>
+<a class="leaf l2" href="#p21">流程圖<span class="pg">21</span></a>
+<a class="leaf l2" href="#p22">要旨與註解<span class="pg">22</span></a>
+</details>
+<details><summary>G8 骨針操作流程（EMT-P）<a class="golink" href="#p23">p.23</a></summary>
+<a class="leaf l2" href="#p23">必要條件、適用時機與禁忌症<span class="pg">23</span></a>
+<a class="leaf l2" href="#p23">肱骨骨針的十個標準步驟<span class="pg">23</span></a>
+<a class="leaf l2" href="#p24">肱骨骨針操作圖解<span class="pg">24</span></a>
+<a class="leaf l2" href="#p26">脛骨骨針的十個標準步驟<span class="pg">26</span></a>
+<a class="leaf l2" href="#p26">脛骨骨針操作圖解<span class="pg">26</span></a>
+</details>
+</details>
+<details open><summary>內科流程（M）<a class="golink" href="#p28">p.28</a></summary>
+<details><summary>M1 無脈搏流程<a class="golink" href="#p28">p.28</a></summary>
+<a class="leaf l2" href="#p28">流程圖<span class="pg">28</span></a>
+<a class="leaf l2" href="#p29">要旨與註解<span class="pg">29</span></a>
+<a class="leaf l2" href="#p31">電擊能量設定<span class="pg">31</span></a>
+<a class="leaf l2" href="#p32">輔助呼吸道與聲門上呼吸道<span class="pg">32</span></a>
+<a class="leaf l2" href="#p33">離開急救現場前應注意事項<span class="pg">33</span></a>
+</details>
+<details><summary>M2 重大災難或嚴重傳染病流行期間現場終止心肺復甦流程<a class="golink" href="#p34">p.34</a></summary>
+<a class="leaf l2" href="#p34">流程圖<span class="pg">34</span></a>
+<a class="leaf l2" href="#p35">要旨（目的、啟動條件、終止施救條件）<span class="pg">35</span></a>
+</details>
+<details><summary>M3 呼吸困難流程<a class="golink" href="#p36">p.36</a></summary>
+<a class="leaf l2" href="#p36">流程圖<span class="pg">36</span></a>
+<a class="leaf l2" href="#p37">要旨與註解<span class="pg">37</span></a>
+</details>
+<details><summary>M4 意識不清流程<a class="golink" href="#p39">p.39</a></summary>
+<a class="leaf l2" href="#p39">流程圖<span class="pg">39</span></a>
+<a class="leaf l2" href="#p40">要旨與註解<span class="pg">40</span></a>
+</details>
+<details><summary>M5 抽搐流程<a class="golink" href="#p42">p.42</a></summary>
+<a class="leaf l2" href="#p42">流程圖<span class="pg">42</span></a>
+<a class="leaf l2" href="#p43">要旨與註解<span class="pg">43</span></a>
+</details>
+<details><summary>M6 嚴重過敏流程<a class="golink" href="#p44">p.44</a></summary>
+<a class="leaf l2" href="#p44">流程圖<span class="pg">44</span></a>
+<a class="leaf l2" href="#p45">要旨與註解<span class="pg">45</span></a>
+</details>
+<details><summary>M7 腦中風流程<a class="golink" href="#p48">p.48</a></summary>
+<a class="leaf l2" href="#p48">流程圖<span class="pg">48</span></a>
+<a class="leaf l2" href="#p49">要旨與註解<span class="pg">49</span></a>
+<a class="leaf l2" href="#p49">中風黃金時間與後送原則<span class="pg">49</span></a>
+<a class="leaf l2" href="#p49">到院前中風指標：LAPSS、G-FAST<span class="pg">49</span></a>
+<a class="leaf l2" href="#p51">意識不清合併肢體無力之鑑別（A-E-I-O-U-TIPS）<span class="pg">51</span></a>
+</details>
+<details><summary>M8 疑似心因性胸痛傷病患操作流程<a class="golink" href="#p52">p.52</a></summary>
+<a class="leaf l2" href="#p52">流程圖<span class="pg">52</span></a>
+<a class="leaf l2" href="#p53">要旨與註解<span class="pg">53</span></a>
+<a class="leaf l2" href="#p55">十二導程心電圖 ST-T 變化對照表<span class="pg">55</span></a>
+<a class="leaf l2" href="#p56">Aspirin 給藥條件與禁忌症<span class="pg">56</span></a>
+<a class="leaf l2" href="#p56">硝化甘油（NTG）使用與禁忌症<span class="pg">56</span></a>
+<a class="leaf l2" href="#p57">雙血小板凝集抑制劑檢查單<span class="pg">57</span></a>
+</details>
+<details><summary>M9 緩脈與頻脈流程（EMT-P）<a class="golink" href="#p58">p.58</a></summary>
+<a class="leaf l2" href="#p58">流程圖<span class="pg">58</span></a>
+<a class="leaf l2" href="#p59">要旨與註解<span class="pg">59</span></a>
+</details>
+<details><summary>M10 急性肺水腫流程<a class="golink" href="#p62">p.62</a></summary>
+<a class="leaf l2" href="#p62">流程圖<span class="pg">62</span></a>
+<a class="leaf l2" href="#p63">要旨與註解<span class="pg">63</span></a>
+</details>
+</details>
+<details open><summary>線上醫療指導（O）<a class="golink" href="#p64">p.64</a></summary>
+<details><summary>O1 線上醫療指導流程<a class="golink" href="#p64">p.64</a></summary>
+<a class="leaf l2" href="#p64">流程圖<span class="pg">64</span></a>
+<a class="leaf l2" href="#p65">要旨與註解<span class="pg">65</span></a>
+</details>
+</details>
+<details open><summary>呼吸道流程（A）<a class="golink" href="#p66">p.66</a></summary>
+<details><summary>A1 成人氣管內管插管流程（EMT-P）<a class="golink" href="#p66">p.66</a></summary>
+<a class="leaf l2" href="#p66">流程圖<span class="pg">66</span></a>
+<a class="leaf l2" href="#p67">要旨與註解<span class="pg">67</span></a>
+<a class="leaf l2" href="#p68">到院前插管處置說明暨家屬同意書<span class="pg">68</span></a>
+<a class="leaf l2" href="#p70">DAI 藥物表與管制藥物管理<span class="pg">70</span></a>
+<a class="leaf l2" href="#p73">藥物輔助插管（DAI）流程輔助小卡<span class="pg">73</span></a>
+<a class="leaf l2" href="#p74">DAI 患者篩選確認表與流程圖<span class="pg">74</span></a>
+</details>
+<details><summary>A2 異物哽塞流程<a class="golink" href="#p75">p.75</a></summary>
+<a class="leaf l2" href="#p75">流程圖<span class="pg">75</span></a>
+<a class="leaf l2" href="#p76">要旨與註解<span class="pg">76</span></a>
+</details>
+<details><summary>A3 已氣切傷病患呼吸困難流程<a class="golink" href="#p78">p.78</a></summary>
+<a class="leaf l2" href="#p78">流程圖<span class="pg">78</span></a>
+<a class="leaf l2" href="#p79">要旨與註解<span class="pg">79</span></a>
+</details>
+<details><summary>A4 非侵襲性呼吸器（NIPPV）使用流程（EMT-P+）<a class="golink" href="#p81">p.81</a></summary>
+<a class="leaf l2" href="#p81">流程圖<span class="pg">81</span></a>
+<a class="leaf l2" href="#p82">要旨與註解（適應症、禁忌症、中止時機）<span class="pg">82</span></a>
+</details>
+</details>
+<details open><summary>特殊狀況流程（S）<a class="golink" href="#p86">p.86</a></summary>
+<details><summary>S1 燒燙傷處置流程<a class="golink" href="#p86">p.86</a></summary>
+<a class="leaf l2" href="#p86">流程圖<span class="pg">86</span></a>
+<a class="leaf l2" href="#p87">要旨與註解<span class="pg">87</span></a>
+</details>
+<details><summary>S2 溺水傷病患流程<a class="golink" href="#p90">p.90</a></summary>
+<a class="leaf l2" href="#p90">流程圖<span class="pg">90</span></a>
+<a class="leaf l2" href="#p91">要旨與註解<span class="pg">91</span></a>
+</details>
+<details><summary>S3 毒、藥物過量傷病患流程<a class="golink" href="#p92">p.92</a></summary>
+<a class="leaf l2" href="#p92">流程圖<span class="pg">92</span></a>
+<a class="leaf l2" href="#p93">要旨與註解<span class="pg">93</span></a>
+</details>
+<details><summary>S4 自然生產及產科急症流程<a class="golink" href="#p95">p.95</a></summary>
+<a class="leaf l2" href="#p95">流程圖<span class="pg">95</span></a>
+<a class="leaf l2" href="#p96">要旨與註解（產兆、臍帶脫垂、臀位生產）<span class="pg">96</span></a>
+</details>
+<details><summary>S5 新生兒流程<a class="golink" href="#p98">p.98</a></summary>
+<a class="leaf l2" href="#p98">流程圖<span class="pg">98</span></a>
+<a class="leaf l2" href="#p99">要旨與註解<span class="pg">99</span></a>
+</details>
+<details><summary>S6 小兒通用流程<a class="golink" href="#p102">p.102</a></summary>
+<a class="leaf l2" href="#p102">流程圖（小兒評估三角）<span class="pg">102</span></a>
+<a class="leaf l2" href="#p103">要旨與註解<span class="pg">103</span></a>
+</details>
+<details><summary>S7 精神異常與行為急症流程<a class="golink" href="#p104">p.104</a></summary>
+<a class="leaf l2" href="#p104">流程圖<span class="pg">104</span></a>
+<a class="leaf l2" href="#p105">要旨與註解<span class="pg">105</span></a>
+</details>
+<details><summary>S8 大量傷病患流程<a class="golink" href="#p106">p.106</a></summary>
+<a class="leaf l2" href="#p106">流程圖<span class="pg">106</span></a>
+<a class="leaf l2" href="#p107">要旨與註解（指揮、檢傷、治療、後送）<span class="pg">107</span></a>
+<a class="leaf l2" href="#p108">災害應變組織架構圖<span class="pg">108</span></a>
+<a class="leaf l2" href="#p110">救護指揮官任務執行表<span class="pg">110</span></a>
+<a class="leaf l2" href="#p111">後送官任務執行表<span class="pg">111</span></a>
+<a class="leaf l2" href="#p112">成人 START 檢傷法<span class="pg">112</span></a>
+<a class="leaf l2" href="#p113">兒童 Jump START 檢傷法<span class="pg">113</span></a>
+</details>
+<details><summary>S9 拒絕送醫流程<a class="golink" href="#p114">p.114</a></summary>
+<a class="leaf l2" href="#p114">流程圖<span class="pg">114</span></a>
+<a class="leaf l2" href="#p115">要旨與註解<span class="pg">115</span></a>
+</details>
+<details><summary>S10 復甦後照護流程<a class="golink" href="#p116">p.116</a></summary>
+<a class="leaf l2" href="#p116">流程圖<span class="pg">116</span></a>
+<a class="leaf l2" href="#p117">要旨與註解<span class="pg">117</span></a>
+</details>
+<details><summary>S11 低體溫處置流程<a class="golink" href="#p118">p.118</a></summary>
+<a class="leaf l2" href="#p118">流程圖<span class="pg">118</span></a>
+<a class="leaf l2" href="#p119">要旨與註解<span class="pg">119</span></a>
+</details>
+<details><summary>S12 熱急症處置流程<a class="golink" href="#p120">p.120</a></summary>
+<a class="leaf l2" href="#p120">流程圖<span class="pg">120</span></a>
+<a class="leaf l2" href="#p121">要旨與註解<span class="pg">121</span></a>
+</details>
+<details><summary>S13 長時間後送傷病患流程（30 分鐘以上）<a class="golink" href="#p122">p.122</a></summary>
+<a class="leaf l2" href="#p122">流程圖<span class="pg">122</span></a>
+<a class="leaf l2" href="#p123">要旨與註解<span class="pg">123</span></a>
+</details>
+<details><summary>S14 疑似化學災害處置流程<a class="golink" href="#p124">p.124</a></summary>
+<a class="leaf l2" href="#p124">流程圖<span class="pg">124</span></a>
+<a class="leaf l2" href="#p125">要旨與註解<span class="pg">125</span></a>
+</details>
+<details><summary>S15 疑似輻射災害傷病患處置流程<a class="golink" href="#p127">p.127</a></summary>
+<a class="leaf l2" href="#p127">流程圖<span class="pg">127</span></a>
+<a class="leaf l2" href="#p128">要旨與註解<span class="pg">128</span></a>
+</details>
+</details>
+<details open><summary>創傷流程（T）<a class="golink" href="#p131">p.131</a></summary>
+<details><summary>T1 創傷性休克處置流程<a class="golink" href="#p131">p.131</a></summary>
+<a class="leaf l2" href="#p131">流程圖<span class="pg">131</span></a>
+<a class="leaf l2" href="#p132">要旨與註解<span class="pg">132</span></a>
+<a class="leaf l2" href="#p133">靜脈輸液治療原則<span class="pg">133</span></a>
+<a class="leaf l2" href="#p134">Transamin（TXA）使用檢核表<span class="pg">134</span></a>
+</details>
+<details><summary>T2 頭部創傷處置流程<a class="golink" href="#p135">p.135</a></summary>
+<a class="leaf l2" href="#p135">流程圖<span class="pg">135</span></a>
+<a class="leaf l2" href="#p136">要旨與註解<span class="pg">136</span></a>
+<a class="leaf l2" href="#p137">ETCO2 監測設備圖解<span class="pg">137</span></a>
+</details>
+<details><summary>T3 胸部創傷處置流程<a class="golink" href="#p139">p.139</a></summary>
+<a class="leaf l2" href="#p139">流程圖<span class="pg">139</span></a>
+<a class="leaf l2" href="#p140">要旨與註解<span class="pg">140</span></a>
+<a class="leaf l2" href="#p141">針刺減壓法<span class="pg">141</span></a>
+<a class="leaf l2" href="#p142">E-FAST 簡介與胸部超音波掃描<span class="pg">142</span></a>
+</details>
+<details><summary>T4 腹部創傷處置流程<a class="golink" href="#p145">p.145</a></summary>
+<a class="leaf l2" href="#p145">流程圖<span class="pg">145</span></a>
+<a class="leaf l2" href="#p146">要旨與註解<span class="pg">146</span></a>
+<a class="leaf l2" href="#p147">E-FAST 腹部掃描圖解<span class="pg">147</span></a>
+</details>
+<details><summary>T5 肢體創傷暨壓碎傷流程<a class="golink" href="#p150">p.150</a></summary>
+<a class="leaf l2" href="#p150">流程圖<span class="pg">150</span></a>
+<a class="leaf l2" href="#p151">要旨與註解<span class="pg">151</span></a>
+<a class="leaf l2" href="#p152">止血帶使用方式與時機<span class="pg">152</span></a>
+<a class="leaf l2" href="#p153">視覺模擬評分量表（VAS）<span class="pg">153</span></a>
+</details>
+</details>
+<details open><summary>特殊派遣流程（U）<a class="golink" href="#p154">p.154</a></summary>
+<details><summary>U1 嚴重創傷受困傷病患-醫院雙軌派遣流程<a class="golink" href="#p154">p.154</a></summary>
+<a class="leaf l2" href="#p154">流程圖<span class="pg">154</span></a>
+<a class="leaf l2" href="#p155">要旨與註解<span class="pg">155</span></a>
+<a class="leaf l2" href="#p156">管制藥品領用、使用及管理<span class="pg">156</span></a>
+<a class="leaf l2" href="#p157">血品：緊急輸血適應症與領用流程<span class="pg">157</span></a>
+<a class="leaf l2" href="#p159">附表1 緊急輸血申請單<span class="pg">159</span></a>
+<a class="leaf l2" href="#p160">附表2 輸血反應通知單<span class="pg">160</span></a>
+<a class="leaf l2" href="#p161">醫事人員支援變更執業登記申請書<span class="pg">161</span></a>
+<a class="leaf l2" href="#p162">現場救護與治療紀錄（含現場截肢）<span class="pg">162</span></a>
+<a class="leaf l2" href="#p163">附表3 雙軌派遣藥物領用表<span class="pg">163</span></a>
+<a class="leaf l2" href="#p164">附表4 管制藥品專用處方箋<span class="pg">164</span></a>
+<a class="leaf l2" href="#p165">附表5 醫療組傷病患治療紀錄表<span class="pg">165</span></a>
+<a class="leaf l2" href="#p167">附表6 管制藥品減損藥物回收表<span class="pg">167</span></a>
+<a class="leaf l2" href="#p168">附表7 雙軌派遣藥物繳回表<span class="pg">168</span></a>
+<a class="leaf l2" href="#p169">附表8 輸血設備包清單<span class="pg">169</span></a>
+</details>
+<details><summary>U2 嚴重創傷緊急輸血流程<a class="golink" href="#p170">p.170</a></summary>
+<a class="leaf l2" href="#p170">流程圖<span class="pg">170</span></a>
+<a class="leaf l2" href="#p171">要旨與註解（輸血適應症 Trauma ABC score）<span class="pg">171</span></a>
+<a class="leaf l2" href="#p173">雙重辨識核血與輸血操作<span class="pg">173</span></a>
+<a class="leaf l2" href="#p174">附表 輸血反應通知單<span class="pg">174</span></a>
+<a class="leaf l2" href="#p175">備血檢體、輸血滴速與監測<span class="pg">175</span></a>
+</details>
+<details><summary>U3 急性輸血反應處理流程<a class="golink" href="#p176">p.176</a></summary>
+<a class="leaf l2" href="#p176">流程圖<span class="pg">176</span></a>
+<a class="leaf l2" href="#p177">要旨與註解（輸血反應種類與處置）<span class="pg">177</span></a>
+<a class="leaf l2" href="#p179">附表 輸血反應通知單<span class="pg">179</span></a>
+</details>
+</details>
+<details open><summary>研究流程（R）<a class="golink" href="#p180">p.180</a></summary>
+<details><summary>R1 研究計畫審查流程<a class="golink" href="#p180">p.180</a></summary>
+<a class="leaf l2" href="#p180">流程圖<span class="pg">180</span></a>
+<a class="leaf l2" href="#p181">要旨與註解<span class="pg">181</span></a>
+</details>
+<details><summary>R2 REVIVES trial 無脈搏流程（2024～2026 年）<a class="golink" href="#p183">p.183</a></summary>
+<a class="leaf l2" href="#p183">流程圖<span class="pg">183</span></a>
+<a class="leaf l2" href="#p184">要旨與註解<span class="pg">184</span></a>
+</details>
+</details>
+<details open><summary>附錄-執行救護勤務安全事項<a class="golink" href="#p189">p.189</a></summary>
+<a class="leaf l1" href="#p189">目的與安全注意事項通則<span class="pg">189</span></a>
+<a class="leaf l1" href="#p190">各類傷病患及救護環境執勤安全注意事項<span class="pg">190</span></a>
+</details>
+<a class="leaf l0" href="#p193">參考文獻<span class="pg">193</span></a>
+<a class="leaf l0" href="#p194">編輯群介紹<span class="pg">194</span></a></nav>
+</aside>
+<div id="main"><section class="page" id="p1" data-n="1"><img loading="lazy" decoding="async" src="pages/p001.webp" width="1241" height="1754" alt="第 1 頁"><span class="pnum">1 / 194</span></section>
+<section class="page" id="p2" data-n="2"><img loading="lazy" decoding="async" src="pages/p002.webp" width="1241" height="1754" alt="第 2 頁"><span class="pnum">2 / 194</span></section>
+<section class="page" id="p3" data-n="3"><img loading="lazy" decoding="async" src="pages/p003.webp" width="1241" height="1754" alt="第 3 頁"><span class="pnum">3 / 194</span></section>
+<section class="page" id="p4" data-n="4"><img loading="lazy" decoding="async" src="pages/p004.webp" width="1241" height="1754" alt="第 4 頁"><span class="pnum">4 / 194</span></section>
+<section class="page" id="p5" data-n="5"><img loading="lazy" decoding="async" src="pages/p005.webp" width="1241" height="1754" alt="第 5 頁"><span class="pnum">5 / 194</span></section>
+<section class="page" id="p6" data-n="6"><img loading="lazy" decoding="async" src="pages/p006.webp" width="1241" height="1754" alt="第 6 頁"><span class="pnum">6 / 194</span></section>
+<section class="page" id="p7" data-n="7"><img loading="lazy" decoding="async" src="pages/p007.webp" width="1241" height="1754" alt="第 7 頁"><span class="pnum">7 / 194</span></section>
+<section class="page" id="p8" data-n="8"><img loading="lazy" decoding="async" src="pages/p008.webp" width="1241" height="1754" alt="第 8 頁"><span class="pnum">8 / 194</span></section>
+<section class="page" id="p9" data-n="9"><img loading="lazy" decoding="async" src="pages/p009.webp" width="1241" height="1754" alt="第 9 頁"><span class="pnum">9 / 194</span></section>
+<section class="page" id="p10" data-n="10"><img loading="lazy" decoding="async" src="pages/p010.webp" width="1241" height="1754" alt="第 10 頁"><span class="pnum">10 / 194</span></section>
+<section class="page" id="p11" data-n="11"><img loading="lazy" decoding="async" src="pages/p011.webp" width="1241" height="1754" alt="第 11 頁"><span class="pnum">11 / 194</span></section>
+<section class="page" id="p12" data-n="12"><img loading="lazy" decoding="async" src="pages/p012.webp" width="1241" height="1754" alt="第 12 頁"><span class="pnum">12 / 194</span></section>
+<section class="page" id="p13" data-n="13"><img loading="lazy" decoding="async" src="pages/p013.webp" width="1241" height="1754" alt="第 13 頁"><span class="pnum">13 / 194</span></section>
+<section class="page" id="p14" data-n="14"><img loading="lazy" decoding="async" src="pages/p014.webp" width="1241" height="1754" alt="第 14 頁"><span class="pnum">14 / 194</span></section>
+<section class="page" id="p15" data-n="15"><img loading="lazy" decoding="async" src="pages/p015.webp" width="1241" height="1754" alt="第 15 頁"><span class="pnum">15 / 194</span></section>
+<section class="page" id="p16" data-n="16"><img loading="lazy" decoding="async" src="pages/p016.webp" width="1241" height="1754" alt="第 16 頁"><span class="pnum">16 / 194</span></section>
+<section class="page" id="p17" data-n="17"><img loading="lazy" decoding="async" src="pages/p017.webp" width="1241" height="1754" alt="第 17 頁"><span class="pnum">17 / 194</span></section>
+<section class="page" id="p18" data-n="18"><img loading="lazy" decoding="async" src="pages/p018.webp" width="1241" height="1754" alt="第 18 頁"><span class="pnum">18 / 194</span></section>
+<section class="page" id="p19" data-n="19"><img loading="lazy" decoding="async" src="pages/p019.webp" width="1241" height="1754" alt="第 19 頁"><span class="pnum">19 / 194</span></section>
+<section class="page" id="p20" data-n="20"><img loading="lazy" decoding="async" src="pages/p020.webp" width="1241" height="1754" alt="第 20 頁"><span class="pnum">20 / 194</span></section>
+<section class="page" id="p21" data-n="21"><img loading="lazy" decoding="async" src="pages/p021.webp" width="1241" height="1754" alt="第 21 頁"><span class="pnum">21 / 194</span></section>
+<section class="page" id="p22" data-n="22"><img loading="lazy" decoding="async" src="pages/p022.webp" width="1241" height="1754" alt="第 22 頁"><span class="pnum">22 / 194</span></section>
+<section class="page" id="p23" data-n="23"><img loading="lazy" decoding="async" src="pages/p023.webp" width="1241" height="1754" alt="第 23 頁"><span class="pnum">23 / 194</span></section>
+<section class="page" id="p24" data-n="24"><img loading="lazy" decoding="async" src="pages/p024.webp" width="1241" height="1754" alt="第 24 頁"><span class="pnum">24 / 194</span></section>
+<section class="page" id="p25" data-n="25"><img loading="lazy" decoding="async" src="pages/p025.webp" width="1241" height="1754" alt="第 25 頁"><span class="pnum">25 / 194</span></section>
+<section class="page" id="p26" data-n="26"><img loading="lazy" decoding="async" src="pages/p026.webp" width="1241" height="1754" alt="第 26 頁"><span class="pnum">26 / 194</span></section>
+<section class="page" id="p27" data-n="27"><img loading="lazy" decoding="async" src="pages/p027.webp" width="1241" height="1754" alt="第 27 頁"><span class="pnum">27 / 194</span></section>
+<section class="page" id="p28" data-n="28"><img loading="lazy" decoding="async" src="pages/p028.webp" width="1241" height="1754" alt="第 28 頁"><span class="pnum">28 / 194</span></section>
+<section class="page" id="p29" data-n="29"><img loading="lazy" decoding="async" src="pages/p029.webp" width="1241" height="1754" alt="第 29 頁"><span class="pnum">29 / 194</span></section>
+<section class="page" id="p30" data-n="30"><img loading="lazy" decoding="async" src="pages/p030.webp" width="1241" height="1754" alt="第 30 頁"><span class="pnum">30 / 194</span></section>
+<section class="page" id="p31" data-n="31"><img loading="lazy" decoding="async" src="pages/p031.webp" width="1241" height="1754" alt="第 31 頁"><span class="pnum">31 / 194</span></section>
+<section class="page" id="p32" data-n="32"><img loading="lazy" decoding="async" src="pages/p032.webp" width="1241" height="1754" alt="第 32 頁"><span class="pnum">32 / 194</span></section>
+<section class="page" id="p33" data-n="33"><img loading="lazy" decoding="async" src="pages/p033.webp" width="1241" height="1754" alt="第 33 頁"><span class="pnum">33 / 194</span></section>
+<section class="page" id="p34" data-n="34"><img loading="lazy" decoding="async" src="pages/p034.webp" width="1241" height="1754" alt="第 34 頁"><span class="pnum">34 / 194</span></section>
+<section class="page" id="p35" data-n="35"><img loading="lazy" decoding="async" src="pages/p035.webp" width="1241" height="1754" alt="第 35 頁"><span class="pnum">35 / 194</span></section>
+<section class="page" id="p36" data-n="36"><img loading="lazy" decoding="async" src="pages/p036.webp" width="1241" height="1754" alt="第 36 頁"><span class="pnum">36 / 194</span></section>
+<section class="page" id="p37" data-n="37"><img loading="lazy" decoding="async" src="pages/p037.webp" width="1241" height="1754" alt="第 37 頁"><span class="pnum">37 / 194</span></section>
+<section class="page" id="p38" data-n="38"><img loading="lazy" decoding="async" src="pages/p038.webp" width="1241" height="1754" alt="第 38 頁"><span class="pnum">38 / 194</span></section>
+<section class="page" id="p39" data-n="39"><img loading="lazy" decoding="async" src="pages/p039.webp" width="1241" height="1754" alt="第 39 頁"><span class="pnum">39 / 194</span></section>
+<section class="page" id="p40" data-n="40"><img loading="lazy" decoding="async" src="pages/p040.webp" width="1241" height="1754" alt="第 40 頁"><span class="pnum">40 / 194</span></section>
+<section class="page" id="p41" data-n="41"><img loading="lazy" decoding="async" src="pages/p041.webp" width="1241" height="1754" alt="第 41 頁"><span class="pnum">41 / 194</span></section>
+<section class="page" id="p42" data-n="42"><img loading="lazy" decoding="async" src="pages/p042.webp" width="1241" height="1754" alt="第 42 頁"><span class="pnum">42 / 194</span></section>
+<section class="page" id="p43" data-n="43"><img loading="lazy" decoding="async" src="pages/p043.webp" width="1241" height="1754" alt="第 43 頁"><span class="pnum">43 / 194</span></section>
+<section class="page" id="p44" data-n="44"><img loading="lazy" decoding="async" src="pages/p044.webp" width="1241" height="1754" alt="第 44 頁"><span class="pnum">44 / 194</span></section>
+<section class="page" id="p45" data-n="45"><img loading="lazy" decoding="async" src="pages/p045.webp" width="1241" height="1754" alt="第 45 頁"><span class="pnum">45 / 194</span></section>
+<section class="page" id="p46" data-n="46"><img loading="lazy" decoding="async" src="pages/p046.webp" width="1241" height="1754" alt="第 46 頁"><span class="pnum">46 / 194</span></section>
+<section class="page" id="p47" data-n="47"><img loading="lazy" decoding="async" src="pages/p047.webp" width="1241" height="1754" alt="第 47 頁"><span class="pnum">47 / 194</span></section>
+<section class="page" id="p48" data-n="48"><img loading="lazy" decoding="async" src="pages/p048.webp" width="1241" height="1754" alt="第 48 頁"><span class="pnum">48 / 194</span></section>
+<section class="page" id="p49" data-n="49"><img loading="lazy" decoding="async" src="pages/p049.webp" width="1241" height="1754" alt="第 49 頁"><span class="pnum">49 / 194</span></section>
+<section class="page" id="p50" data-n="50"><img loading="lazy" decoding="async" src="pages/p050.webp" width="1241" height="1754" alt="第 50 頁"><span class="pnum">50 / 194</span></section>
+<section class="page" id="p51" data-n="51"><img loading="lazy" decoding="async" src="pages/p051.webp" width="1241" height="1754" alt="第 51 頁"><span class="pnum">51 / 194</span></section>
+<section class="page" id="p52" data-n="52"><img loading="lazy" decoding="async" src="pages/p052.webp" width="1241" height="1754" alt="第 52 頁"><span class="pnum">52 / 194</span></section>
+<section class="page" id="p53" data-n="53"><img loading="lazy" decoding="async" src="pages/p053.webp" width="1241" height="1754" alt="第 53 頁"><span class="pnum">53 / 194</span></section>
+<section class="page" id="p54" data-n="54"><img loading="lazy" decoding="async" src="pages/p054.webp" width="1241" height="1754" alt="第 54 頁"><span class="pnum">54 / 194</span></section>
+<section class="page" id="p55" data-n="55"><img loading="lazy" decoding="async" src="pages/p055.webp" width="1241" height="1754" alt="第 55 頁"><span class="pnum">55 / 194</span></section>
+<section class="page" id="p56" data-n="56"><img loading="lazy" decoding="async" src="pages/p056.webp" width="1241" height="1754" alt="第 56 頁"><span class="pnum">56 / 194</span></section>
+<section class="page" id="p57" data-n="57"><img loading="lazy" decoding="async" src="pages/p057.webp" width="1241" height="1754" alt="第 57 頁"><span class="pnum">57 / 194</span></section>
+<section class="page" id="p58" data-n="58"><img loading="lazy" decoding="async" src="pages/p058.webp" width="1241" height="1754" alt="第 58 頁"><span class="pnum">58 / 194</span></section>
+<section class="page" id="p59" data-n="59"><img loading="lazy" decoding="async" src="pages/p059.webp" width="1241" height="1754" alt="第 59 頁"><span class="pnum">59 / 194</span></section>
+<section class="page" id="p60" data-n="60"><img loading="lazy" decoding="async" src="pages/p060.webp" width="1241" height="1754" alt="第 60 頁"><span class="pnum">60 / 194</span></section>
+<section class="page" id="p61" data-n="61"><img loading="lazy" decoding="async" src="pages/p061.webp" width="1241" height="1754" alt="第 61 頁"><span class="pnum">61 / 194</span></section>
+<section class="page" id="p62" data-n="62"><img loading="lazy" decoding="async" src="pages/p062.webp" width="1241" height="1754" alt="第 62 頁"><span class="pnum">62 / 194</span></section>
+<section class="page" id="p63" data-n="63"><img loading="lazy" decoding="async" src="pages/p063.webp" width="1241" height="1754" alt="第 63 頁"><span class="pnum">63 / 194</span></section>
+<section class="page" id="p64" data-n="64"><img loading="lazy" decoding="async" src="pages/p064.webp" width="1241" height="1754" alt="第 64 頁"><span class="pnum">64 / 194</span></section>
+<section class="page" id="p65" data-n="65"><img loading="lazy" decoding="async" src="pages/p065.webp" width="1241" height="1754" alt="第 65 頁"><span class="pnum">65 / 194</span></section>
+<section class="page" id="p66" data-n="66"><img loading="lazy" decoding="async" src="pages/p066.webp" width="1241" height="1754" alt="第 66 頁"><span class="pnum">66 / 194</span></section>
+<section class="page" id="p67" data-n="67"><img loading="lazy" decoding="async" src="pages/p067.webp" width="1241" height="1754" alt="第 67 頁"><span class="pnum">67 / 194</span></section>
+<section class="page" id="p68" data-n="68"><img loading="lazy" decoding="async" src="pages/p068.webp" width="1241" height="1754" alt="第 68 頁"><span class="pnum">68 / 194</span></section>
+<section class="page" id="p69" data-n="69"><img loading="lazy" decoding="async" src="pages/p069.webp" width="1241" height="1754" alt="第 69 頁"><span class="pnum">69 / 194</span></section>
+<section class="page" id="p70" data-n="70"><img loading="lazy" decoding="async" src="pages/p070.webp" width="1241" height="1754" alt="第 70 頁"><span class="pnum">70 / 194</span></section>
+<section class="page" id="p71" data-n="71"><img loading="lazy" decoding="async" src="pages/p071.webp" width="1241" height="1754" alt="第 71 頁"><span class="pnum">71 / 194</span></section>
+<section class="page" id="p72" data-n="72"><img loading="lazy" decoding="async" src="pages/p072.webp" width="1241" height="1754" alt="第 72 頁"><span class="pnum">72 / 194</span></section>
+<section class="page" id="p73" data-n="73"><img loading="lazy" decoding="async" src="pages/p073.webp" width="1241" height="1754" alt="第 73 頁"><span class="pnum">73 / 194</span></section>
+<section class="page" id="p74" data-n="74"><img loading="lazy" decoding="async" src="pages/p074.webp" width="1241" height="1754" alt="第 74 頁"><span class="pnum">74 / 194</span></section>
+<section class="page" id="p75" data-n="75"><img loading="lazy" decoding="async" src="pages/p075.webp" width="1241" height="1754" alt="第 75 頁"><span class="pnum">75 / 194</span></section>
+<section class="page" id="p76" data-n="76"><img loading="lazy" decoding="async" src="pages/p076.webp" width="1241" height="1754" alt="第 76 頁"><span class="pnum">76 / 194</span></section>
+<section class="page" id="p77" data-n="77"><img loading="lazy" decoding="async" src="pages/p077.webp" width="1241" height="1754" alt="第 77 頁"><span class="pnum">77 / 194</span></section>
+<section class="page" id="p78" data-n="78"><img loading="lazy" decoding="async" src="pages/p078.webp" width="1241" height="1754" alt="第 78 頁"><span class="pnum">78 / 194</span></section>
+<section class="page" id="p79" data-n="79"><img loading="lazy" decoding="async" src="pages/p079.webp" width="1241" height="1754" alt="第 79 頁"><span class="pnum">79 / 194</span></section>
+<section class="page" id="p80" data-n="80"><img loading="lazy" decoding="async" src="pages/p080.webp" width="1241" height="1754" alt="第 80 頁"><span class="pnum">80 / 194</span></section>
+<section class="page" id="p81" data-n="81"><img loading="lazy" decoding="async" src="pages/p081.webp" width="1241" height="1754" alt="第 81 頁"><span class="pnum">81 / 194</span></section>
+<section class="page" id="p82" data-n="82"><img loading="lazy" decoding="async" src="pages/p082.webp" width="1241" height="1754" alt="第 82 頁"><span class="pnum">82 / 194</span></section>
+<section class="page" id="p83" data-n="83"><img loading="lazy" decoding="async" src="pages/p083.webp" width="1241" height="1754" alt="第 83 頁"><span class="pnum">83 / 194</span></section>
+<section class="page" id="p84" data-n="84"><img loading="lazy" decoding="async" src="pages/p084.webp" width="1241" height="1754" alt="第 84 頁"><span class="pnum">84 / 194</span></section>
+<section class="page" id="p85" data-n="85"><img loading="lazy" decoding="async" src="pages/p085.webp" width="1241" height="1754" alt="第 85 頁"><span class="pnum">85 / 194</span></section>
+<section class="page" id="p86" data-n="86"><img loading="lazy" decoding="async" src="pages/p086.webp" width="1241" height="1754" alt="第 86 頁"><span class="pnum">86 / 194</span></section>
+<section class="page" id="p87" data-n="87"><img loading="lazy" decoding="async" src="pages/p087.webp" width="1241" height="1754" alt="第 87 頁"><span class="pnum">87 / 194</span></section>
+<section class="page" id="p88" data-n="88"><img loading="lazy" decoding="async" src="pages/p088.webp" width="1241" height="1754" alt="第 88 頁"><span class="pnum">88 / 194</span></section>
+<section class="page" id="p89" data-n="89"><img loading="lazy" decoding="async" src="pages/p089.webp" width="1241" height="1754" alt="第 89 頁"><span class="pnum">89 / 194</span></section>
+<section class="page" id="p90" data-n="90"><img loading="lazy" decoding="async" src="pages/p090.webp" width="1241" height="1754" alt="第 90 頁"><span class="pnum">90 / 194</span></section>
+<section class="page" id="p91" data-n="91"><img loading="lazy" decoding="async" src="pages/p091.webp" width="1241" height="1754" alt="第 91 頁"><span class="pnum">91 / 194</span></section>
+<section class="page" id="p92" data-n="92"><img loading="lazy" decoding="async" src="pages/p092.webp" width="1241" height="1754" alt="第 92 頁"><span class="pnum">92 / 194</span></section>
+<section class="page" id="p93" data-n="93"><img loading="lazy" decoding="async" src="pages/p093.webp" width="1241" height="1754" alt="第 93 頁"><span class="pnum">93 / 194</span></section>
+<section class="page" id="p94" data-n="94"><img loading="lazy" decoding="async" src="pages/p094.webp" width="1241" height="1754" alt="第 94 頁"><span class="pnum">94 / 194</span></section>
+<section class="page" id="p95" data-n="95"><img loading="lazy" decoding="async" src="pages/p095.webp" width="1241" height="1754" alt="第 95 頁"><span class="pnum">95 / 194</span></section>
+<section class="page" id="p96" data-n="96"><img loading="lazy" decoding="async" src="pages/p096.webp" width="1241" height="1754" alt="第 96 頁"><span class="pnum">96 / 194</span></section>
+<section class="page" id="p97" data-n="97"><img loading="lazy" decoding="async" src="pages/p097.webp" width="1241" height="1754" alt="第 97 頁"><span class="pnum">97 / 194</span></section>
+<section class="page" id="p98" data-n="98"><img loading="lazy" decoding="async" src="pages/p098.webp" width="1241" height="1754" alt="第 98 頁"><span class="pnum">98 / 194</span></section>
+<section class="page" id="p99" data-n="99"><img loading="lazy" decoding="async" src="pages/p099.webp" width="1241" height="1754" alt="第 99 頁"><span class="pnum">99 / 194</span></section>
+<section class="page" id="p100" data-n="100"><img loading="lazy" decoding="async" src="pages/p100.webp" width="1241" height="1754" alt="第 100 頁"><span class="pnum">100 / 194</span></section>
+<section class="page" id="p101" data-n="101"><img loading="lazy" decoding="async" src="pages/p101.webp" width="1241" height="1754" alt="第 101 頁"><span class="pnum">101 / 194</span></section>
+<section class="page" id="p102" data-n="102"><img loading="lazy" decoding="async" src="pages/p102.webp" width="1241" height="1754" alt="第 102 頁"><span class="pnum">102 / 194</span></section>
+<section class="page" id="p103" data-n="103"><img loading="lazy" decoding="async" src="pages/p103.webp" width="1241" height="1754" alt="第 103 頁"><span class="pnum">103 / 194</span></section>
+<section class="page" id="p104" data-n="104"><img loading="lazy" decoding="async" src="pages/p104.webp" width="1241" height="1754" alt="第 104 頁"><span class="pnum">104 / 194</span></section>
+<section class="page" id="p105" data-n="105"><img loading="lazy" decoding="async" src="pages/p105.webp" width="1241" height="1754" alt="第 105 頁"><span class="pnum">105 / 194</span></section>
+<section class="page" id="p106" data-n="106"><img loading="lazy" decoding="async" src="pages/p106.webp" width="1241" height="1754" alt="第 106 頁"><span class="pnum">106 / 194</span></section>
+<section class="page" id="p107" data-n="107"><img loading="lazy" decoding="async" src="pages/p107.webp" width="1241" height="1754" alt="第 107 頁"><span class="pnum">107 / 194</span></section>
+<section class="page" id="p108" data-n="108"><img loading="lazy" decoding="async" src="pages/p108.webp" width="1241" height="1754" alt="第 108 頁"><span class="pnum">108 / 194</span></section>
+<section class="page" id="p109" data-n="109"><img loading="lazy" decoding="async" src="pages/p109.webp" width="1241" height="1754" alt="第 109 頁"><span class="pnum">109 / 194</span></section>
+<section class="page" id="p110" data-n="110"><img loading="lazy" decoding="async" src="pages/p110.webp" width="1241" height="1754" alt="第 110 頁"><span class="pnum">110 / 194</span></section>
+<section class="page" id="p111" data-n="111"><img loading="lazy" decoding="async" src="pages/p111.webp" width="1241" height="1754" alt="第 111 頁"><span class="pnum">111 / 194</span></section>
+<section class="page" id="p112" data-n="112"><img loading="lazy" decoding="async" src="pages/p112.webp" width="1241" height="1754" alt="第 112 頁"><span class="pnum">112 / 194</span></section>
+<section class="page" id="p113" data-n="113"><img loading="lazy" decoding="async" src="pages/p113.webp" width="1241" height="1754" alt="第 113 頁"><span class="pnum">113 / 194</span></section>
+<section class="page" id="p114" data-n="114"><img loading="lazy" decoding="async" src="pages/p114.webp" width="1241" height="1754" alt="第 114 頁"><span class="pnum">114 / 194</span></section>
+<section class="page" id="p115" data-n="115"><img loading="lazy" decoding="async" src="pages/p115.webp" width="1241" height="1754" alt="第 115 頁"><span class="pnum">115 / 194</span></section>
+<section class="page" id="p116" data-n="116"><img loading="lazy" decoding="async" src="pages/p116.webp" width="1241" height="1754" alt="第 116 頁"><span class="pnum">116 / 194</span></section>
+<section class="page" id="p117" data-n="117"><img loading="lazy" decoding="async" src="pages/p117.webp" width="1241" height="1754" alt="第 117 頁"><span class="pnum">117 / 194</span></section>
+<section class="page" id="p118" data-n="118"><img loading="lazy" decoding="async" src="pages/p118.webp" width="1241" height="1754" alt="第 118 頁"><span class="pnum">118 / 194</span></section>
+<section class="page" id="p119" data-n="119"><img loading="lazy" decoding="async" src="pages/p119.webp" width="1241" height="1754" alt="第 119 頁"><span class="pnum">119 / 194</span></section>
+<section class="page" id="p120" data-n="120"><img loading="lazy" decoding="async" src="pages/p120.webp" width="1241" height="1754" alt="第 120 頁"><span class="pnum">120 / 194</span></section>
+<section class="page" id="p121" data-n="121"><img loading="lazy" decoding="async" src="pages/p121.webp" width="1241" height="1754" alt="第 121 頁"><span class="pnum">121 / 194</span></section>
+<section class="page" id="p122" data-n="122"><img loading="lazy" decoding="async" src="pages/p122.webp" width="1241" height="1754" alt="第 122 頁"><span class="pnum">122 / 194</span></section>
+<section class="page" id="p123" data-n="123"><img loading="lazy" decoding="async" src="pages/p123.webp" width="1241" height="1754" alt="第 123 頁"><span class="pnum">123 / 194</span></section>
+<section class="page" id="p124" data-n="124"><img loading="lazy" decoding="async" src="pages/p124.webp" width="1241" height="1754" alt="第 124 頁"><span class="pnum">124 / 194</span></section>
+<section class="page" id="p125" data-n="125"><img loading="lazy" decoding="async" src="pages/p125.webp" width="1241" height="1754" alt="第 125 頁"><span class="pnum">125 / 194</span></section>
+<section class="page" id="p126" data-n="126"><img loading="lazy" decoding="async" src="pages/p126.webp" width="1241" height="1754" alt="第 126 頁"><span class="pnum">126 / 194</span></section>
+<section class="page" id="p127" data-n="127"><img loading="lazy" decoding="async" src="pages/p127.webp" width="1241" height="1754" alt="第 127 頁"><span class="pnum">127 / 194</span></section>
+<section class="page" id="p128" data-n="128"><img loading="lazy" decoding="async" src="pages/p128.webp" width="1241" height="1754" alt="第 128 頁"><span class="pnum">128 / 194</span></section>
+<section class="page" id="p129" data-n="129"><img loading="lazy" decoding="async" src="pages/p129.webp" width="1241" height="1754" alt="第 129 頁"><span class="pnum">129 / 194</span></section>
+<section class="page" id="p130" data-n="130"><img loading="lazy" decoding="async" src="pages/p130.webp" width="1241" height="1754" alt="第 130 頁"><span class="pnum">130 / 194</span></section>
+<section class="page" id="p131" data-n="131"><img loading="lazy" decoding="async" src="pages/p131.webp" width="1241" height="1754" alt="第 131 頁"><span class="pnum">131 / 194</span></section>
+<section class="page" id="p132" data-n="132"><img loading="lazy" decoding="async" src="pages/p132.webp" width="1241" height="1754" alt="第 132 頁"><span class="pnum">132 / 194</span></section>
+<section class="page" id="p133" data-n="133"><img loading="lazy" decoding="async" src="pages/p133.webp" width="1241" height="1754" alt="第 133 頁"><span class="pnum">133 / 194</span></section>
+<section class="page" id="p134" data-n="134"><img loading="lazy" decoding="async" src="pages/p134.webp" width="1241" height="1754" alt="第 134 頁"><span class="pnum">134 / 194</span></section>
+<section class="page" id="p135" data-n="135"><img loading="lazy" decoding="async" src="pages/p135.webp" width="1241" height="1754" alt="第 135 頁"><span class="pnum">135 / 194</span></section>
+<section class="page" id="p136" data-n="136"><img loading="lazy" decoding="async" src="pages/p136.webp" width="1241" height="1754" alt="第 136 頁"><span class="pnum">136 / 194</span></section>
+<section class="page" id="p137" data-n="137"><img loading="lazy" decoding="async" src="pages/p137.webp" width="1241" height="1754" alt="第 137 頁"><span class="pnum">137 / 194</span></section>
+<section class="page" id="p138" data-n="138"><img loading="lazy" decoding="async" src="pages/p138.webp" width="1241" height="1754" alt="第 138 頁"><span class="pnum">138 / 194</span></section>
+<section class="page" id="p139" data-n="139"><img loading="lazy" decoding="async" src="pages/p139.webp" width="1241" height="1754" alt="第 139 頁"><span class="pnum">139 / 194</span></section>
+<section class="page" id="p140" data-n="140"><img loading="lazy" decoding="async" src="pages/p140.webp" width="1241" height="1754" alt="第 140 頁"><span class="pnum">140 / 194</span></section>
+<section class="page" id="p141" data-n="141"><img loading="lazy" decoding="async" src="pages/p141.webp" width="1241" height="1754" alt="第 141 頁"><span class="pnum">141 / 194</span></section>
+<section class="page" id="p142" data-n="142"><img loading="lazy" decoding="async" src="pages/p142.webp" width="1241" height="1754" alt="第 142 頁"><span class="pnum">142 / 194</span></section>
+<section class="page" id="p143" data-n="143"><img loading="lazy" decoding="async" src="pages/p143.webp" width="1241" height="1754" alt="第 143 頁"><span class="pnum">143 / 194</span></section>
+<section class="page" id="p144" data-n="144"><img loading="lazy" decoding="async" src="pages/p144.webp" width="1241" height="1754" alt="第 144 頁"><span class="pnum">144 / 194</span></section>
+<section class="page" id="p145" data-n="145"><img loading="lazy" decoding="async" src="pages/p145.webp" width="1241" height="1754" alt="第 145 頁"><span class="pnum">145 / 194</span></section>
+<section class="page" id="p146" data-n="146"><img loading="lazy" decoding="async" src="pages/p146.webp" width="1241" height="1754" alt="第 146 頁"><span class="pnum">146 / 194</span></section>
+<section class="page" id="p147" data-n="147"><img loading="lazy" decoding="async" src="pages/p147.webp" width="1241" height="1754" alt="第 147 頁"><span class="pnum">147 / 194</span></section>
+<section class="page" id="p148" data-n="148"><img loading="lazy" decoding="async" src="pages/p148.webp" width="1241" height="1754" alt="第 148 頁"><span class="pnum">148 / 194</span></section>
+<section class="page" id="p149" data-n="149"><img loading="lazy" decoding="async" src="pages/p149.webp" width="1241" height="1754" alt="第 149 頁"><span class="pnum">149 / 194</span></section>
+<section class="page" id="p150" data-n="150"><img loading="lazy" decoding="async" src="pages/p150.webp" width="1241" height="1754" alt="第 150 頁"><span class="pnum">150 / 194</span></section>
+<section class="page" id="p151" data-n="151"><img loading="lazy" decoding="async" src="pages/p151.webp" width="1241" height="1754" alt="第 151 頁"><span class="pnum">151 / 194</span></section>
+<section class="page" id="p152" data-n="152"><img loading="lazy" decoding="async" src="pages/p152.webp" width="1241" height="1754" alt="第 152 頁"><span class="pnum">152 / 194</span></section>
+<section class="page" id="p153" data-n="153"><img loading="lazy" decoding="async" src="pages/p153.webp" width="1241" height="1754" alt="第 153 頁"><span class="pnum">153 / 194</span></section>
+<section class="page" id="p154" data-n="154"><img loading="lazy" decoding="async" src="pages/p154.webp" width="1241" height="1754" alt="第 154 頁"><span class="pnum">154 / 194</span></section>
+<section class="page" id="p155" data-n="155"><img loading="lazy" decoding="async" src="pages/p155.webp" width="1241" height="1754" alt="第 155 頁"><span class="pnum">155 / 194</span></section>
+<section class="page" id="p156" data-n="156"><img loading="lazy" decoding="async" src="pages/p156.webp" width="1241" height="1754" alt="第 156 頁"><span class="pnum">156 / 194</span></section>
+<section class="page" id="p157" data-n="157"><img loading="lazy" decoding="async" src="pages/p157.webp" width="1241" height="1754" alt="第 157 頁"><span class="pnum">157 / 194</span></section>
+<section class="page" id="p158" data-n="158"><img loading="lazy" decoding="async" src="pages/p158.webp" width="1241" height="1754" alt="第 158 頁"><span class="pnum">158 / 194</span></section>
+<section class="page" id="p159" data-n="159"><img loading="lazy" decoding="async" src="pages/p159.webp" width="1241" height="1754" alt="第 159 頁"><span class="pnum">159 / 194</span></section>
+<section class="page" id="p160" data-n="160"><img loading="lazy" decoding="async" src="pages/p160.webp" width="1241" height="1754" alt="第 160 頁"><span class="pnum">160 / 194</span></section>
+<section class="page" id="p161" data-n="161"><img loading="lazy" decoding="async" src="pages/p161.webp" width="1241" height="1754" alt="第 161 頁"><span class="pnum">161 / 194</span></section>
+<section class="page" id="p162" data-n="162"><img loading="lazy" decoding="async" src="pages/p162.webp" width="1241" height="1754" alt="第 162 頁"><span class="pnum">162 / 194</span></section>
+<section class="page" id="p163" data-n="163"><img loading="lazy" decoding="async" src="pages/p163.webp" width="1241" height="1754" alt="第 163 頁"><span class="pnum">163 / 194</span></section>
+<section class="page" id="p164" data-n="164"><img loading="lazy" decoding="async" src="pages/p164.webp" width="1241" height="1754" alt="第 164 頁"><span class="pnum">164 / 194</span></section>
+<section class="page" id="p165" data-n="165"><img loading="lazy" decoding="async" src="pages/p165.webp" width="1241" height="1754" alt="第 165 頁"><span class="pnum">165 / 194</span></section>
+<section class="page" id="p166" data-n="166"><img loading="lazy" decoding="async" src="pages/p166.webp" width="1241" height="1754" alt="第 166 頁"><span class="pnum">166 / 194</span></section>
+<section class="page" id="p167" data-n="167"><img loading="lazy" decoding="async" src="pages/p167.webp" width="1241" height="1754" alt="第 167 頁"><span class="pnum">167 / 194</span></section>
+<section class="page" id="p168" data-n="168"><img loading="lazy" decoding="async" src="pages/p168.webp" width="1241" height="1754" alt="第 168 頁"><span class="pnum">168 / 194</span></section>
+<section class="page" id="p169" data-n="169"><img loading="lazy" decoding="async" src="pages/p169.webp" width="1241" height="1754" alt="第 169 頁"><span class="pnum">169 / 194</span></section>
+<section class="page" id="p170" data-n="170"><img loading="lazy" decoding="async" src="pages/p170.webp" width="1241" height="1754" alt="第 170 頁"><span class="pnum">170 / 194</span></section>
+<section class="page" id="p171" data-n="171"><img loading="lazy" decoding="async" src="pages/p171.webp" width="1241" height="1754" alt="第 171 頁"><span class="pnum">171 / 194</span></section>
+<section class="page" id="p172" data-n="172"><img loading="lazy" decoding="async" src="pages/p172.webp" width="1241" height="1754" alt="第 172 頁"><span class="pnum">172 / 194</span></section>
+<section class="page" id="p173" data-n="173"><img loading="lazy" decoding="async" src="pages/p173.webp" width="1241" height="1754" alt="第 173 頁"><span class="pnum">173 / 194</span></section>
+<section class="page" id="p174" data-n="174"><img loading="lazy" decoding="async" src="pages/p174.webp" width="1241" height="1754" alt="第 174 頁"><span class="pnum">174 / 194</span></section>
+<section class="page" id="p175" data-n="175"><img loading="lazy" decoding="async" src="pages/p175.webp" width="1241" height="1754" alt="第 175 頁"><span class="pnum">175 / 194</span></section>
+<section class="page" id="p176" data-n="176"><img loading="lazy" decoding="async" src="pages/p176.webp" width="1241" height="1754" alt="第 176 頁"><span class="pnum">176 / 194</span></section>
+<section class="page" id="p177" data-n="177"><img loading="lazy" decoding="async" src="pages/p177.webp" width="1241" height="1754" alt="第 177 頁"><span class="pnum">177 / 194</span></section>
+<section class="page" id="p178" data-n="178"><img loading="lazy" decoding="async" src="pages/p178.webp" width="1241" height="1754" alt="第 178 頁"><span class="pnum">178 / 194</span></section>
+<section class="page" id="p179" data-n="179"><img loading="lazy" decoding="async" src="pages/p179.webp" width="1241" height="1754" alt="第 179 頁"><span class="pnum">179 / 194</span></section>
+<section class="page" id="p180" data-n="180"><img loading="lazy" decoding="async" src="pages/p180.webp" width="1241" height="1754" alt="第 180 頁"><span class="pnum">180 / 194</span></section>
+<section class="page" id="p181" data-n="181"><img loading="lazy" decoding="async" src="pages/p181.webp" width="1241" height="1754" alt="第 181 頁"><span class="pnum">181 / 194</span></section>
+<section class="page" id="p182" data-n="182"><img loading="lazy" decoding="async" src="pages/p182.webp" width="1241" height="1754" alt="第 182 頁"><span class="pnum">182 / 194</span></section>
+<section class="page" id="p183" data-n="183"><img loading="lazy" decoding="async" src="pages/p183.webp" width="1241" height="1754" alt="第 183 頁"><span class="pnum">183 / 194</span></section>
+<section class="page" id="p184" data-n="184"><img loading="lazy" decoding="async" src="pages/p184.webp" width="1241" height="1754" alt="第 184 頁"><span class="pnum">184 / 194</span></section>
+<section class="page" id="p185" data-n="185"><img loading="lazy" decoding="async" src="pages/p185.webp" width="1241" height="1754" alt="第 185 頁"><span class="pnum">185 / 194</span></section>
+<section class="page" id="p186" data-n="186"><img loading="lazy" decoding="async" src="pages/p186.webp" width="1241" height="1754" alt="第 186 頁"><span class="pnum">186 / 194</span></section>
+<section class="page" id="p187" data-n="187"><img loading="lazy" decoding="async" src="pages/p187.webp" width="1241" height="1754" alt="第 187 頁"><span class="pnum">187 / 194</span></section>
+<section class="page" id="p188" data-n="188"><img loading="lazy" decoding="async" src="pages/p188.webp" width="1241" height="1754" alt="第 188 頁"><span class="pnum">188 / 194</span></section>
+<section class="page" id="p189" data-n="189"><img loading="lazy" decoding="async" src="pages/p189.webp" width="1241" height="1754" alt="第 189 頁"><span class="pnum">189 / 194</span></section>
+<section class="page" id="p190" data-n="190"><img loading="lazy" decoding="async" src="pages/p190.webp" width="1241" height="1754" alt="第 190 頁"><span class="pnum">190 / 194</span></section>
+<section class="page" id="p191" data-n="191"><img loading="lazy" decoding="async" src="pages/p191.webp" width="1241" height="1754" alt="第 191 頁"><span class="pnum">191 / 194</span></section>
+<section class="page" id="p192" data-n="192"><img loading="lazy" decoding="async" src="pages/p192.webp" width="1241" height="1754" alt="第 192 頁"><span class="pnum">192 / 194</span></section>
+<section class="page" id="p193" data-n="193"><img loading="lazy" decoding="async" src="pages/p193.webp" width="1241" height="1754" alt="第 193 頁"><span class="pnum">193 / 194</span></section>
+<section class="page" id="p194" data-n="194"><img loading="lazy" decoding="async" src="pages/p194.webp" width="1241" height="1754" alt="第 194 頁"><span class="pnum">194 / 194</span></section></div>
+<button id="totop" aria-label="回頂部">↑</button>
+<script>
+const SEC=[[2, "目錄"], [4, "G1 通用流程"], [5, "G2 現場評估流程"], [8, "G3 非創傷流程"], [11, "G4 創傷流程"], [15, "G5 危急個案"], [18, "G6 車內照護流程"], [21, "G7 到院傷病患交接流程"], [23, "G8 骨針操作流程（EMT-P）"], [28, "M1 無脈搏流程"], [34, "M2 重大災難或嚴重傳染病流行期間現場終止心肺復甦流程"], [36, "M3 呼吸困難流程"], [39, "M4 意識不清流程"], [42, "M5 抽搐流程"], [44, "M6 嚴重過敏流程"], [48, "M7 腦中風流程"], [52, "M8 疑似心因性胸痛傷病患操作流程"], [58, "M9 緩脈與頻脈流程（EMT-P）"], [62, "M10 急性肺水腫流程"], [64, "O1 線上醫療指導流程"], [66, "A1 成人氣管內管插管流程（EMT-P）"], [75, "A2 異物哽塞流程"], [78, "A3 已氣切傷病患呼吸困難流程"], [81, "A4 非侵襲性呼吸器（NIPPV）使用流程（EMT-P+）"], [86, "S1 燒燙傷處置流程"], [90, "S2 溺水傷病患流程"], [92, "S3 毒、藥物過量傷病患流程"], [95, "S4 自然生產及產科急症流程"], [98, "S5 新生兒流程"], [102, "S6 小兒通用流程"], [104, "S7 精神異常與行為急症流程"], [106, "S8 大量傷病患流程"], [114, "S9 拒絕送醫流程"], [116, "S10 復甦後照護流程"], [118, "S11 低體溫處置流程"], [120, "S12 熱急症處置流程"], [122, "S13 長時間後送傷病患流程（30 分鐘以上）"], [124, "S14 疑似化學災害處置流程"], [127, "S15 疑似輻射災害傷病患處置流程"], [131, "T1 創傷性休克處置流程"], [135, "T2 頭部創傷處置流程"], [139, "T3 胸部創傷處置流程"], [145, "T4 腹部創傷處置流程"], [150, "T5 肢體創傷暨壓碎傷流程"], [154, "U1 嚴重創傷受困傷病患-醫院雙軌派遣流程"], [170, "U2 嚴重創傷緊急輸血流程"], [176, "U3 急性輸血反應處理流程"], [180, "R1 研究計畫審查流程"], [183, "R2 REVIVES trial 無脈搏流程（2024～2026 年）"], [189, "目的與安全注意事項通則"], [190, "各類傷病患及救護環境執勤安全注意事項"], [193, "參考文獻"], [194, "編輯群介紹"]];
+const body=document.body, sidebar=document.getElementById('sidebar');
+document.getElementById('menubtn').onclick=()=>body.classList.toggle('nav');
+document.getElementById('dim').onclick=()=>body.classList.remove('nav');
+sidebar.addEventListener('click',e=>{const a=e.target.closest('a');if(a&&innerWidth<=900)body.classList.remove('nav');});
+document.getElementById('totop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
+addEventListener('scroll',()=>body.classList.toggle('scrolled',scrollY>800),{passive:true});
+// current page tracking
+const cursec=document.getElementById('cursec');
+let curLink=null;
+const links=[...sidebar.querySelectorAll('a[href^="#p"]')];
+const linkByPage={};links.forEach(a=>{const p=+a.hash.slice(2);if(!(p in linkByPage))linkByPage[p]=a;});
+function secTitle(n){let t='';for(const[p,s]of SEC){if(p<=n)t=s;else break}return t}
+const io=new IntersectionObserver(es=>{
+ for(const e of es){ if(e.isIntersecting){ const n=+e.target.dataset.n; cursec.textContent=secTitle(n);
+   let best=null;for(const p in linkByPage){if(+p<=n)best=linkByPage[p]}
+   if(best!==curLink){curLink&&curLink.classList.remove('cur');best&&best.classList.add('cur');curLink=best;}
+   history.replaceState(null,'','#p'+n);}}
+},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.page').forEach(s=>io.observe(s));
+// search
+let TXT=null;const results=document.getElementById('results');
+async function ensureTxt(){if(!TXT)TXT=await (await fetch('text.json')).json();return TXT}
+let timer;
+document.getElementById('search').addEventListener('input',e=>{
+ clearTimeout(timer);const q=e.target.value.trim();
+ if(q.length<2){results.innerHTML='';return}
+ timer=setTimeout(async()=>{
+  const txt=await ensureTxt();const ql=q.toLowerCase();const out=[];
+  for(let i=0;i<txt.length&&out.length<30;i++){
+   const pos=txt[i].toLowerCase().indexOf(ql);
+   if(pos>=0){const s=Math.max(0,pos-18);
+    const snip=(s>0?'…':'')+txt[i].slice(s,pos)+'<b>'+txt[i].slice(pos,pos+q.length)+'</b>'+txt[i].slice(pos+q.length,pos+q.length+30)+'…';
+    out.push('<a href="#p'+(i+1)+'"><span class="rp">p.'+(i+1)+'</span> '+snip+'</a>')}}
+  results.innerHTML=out.length?out.join(''):'<a>找不到「'+q.replace(/</g,'&lt;')+'」</a>';
+ },250);
+});
+</script>
+</body>
+</html>
