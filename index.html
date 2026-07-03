@@ -6,7 +6,7 @@
 <title>新北市EMTP SOP 2024 線上版</title>
 <meta name="description" content="新北市政府消防局緊急傷病患作業程序（2024）線上瀏覽版，含完整目錄導覽與全文搜尋">
 <style>
-:root{--bar:#0f4c81;--bg:#e9edf2;--side:#ffffff;--ink:#1c2733;--acc:#0f4c81;--hl:#e8f1fa}
+:root{--bar:#0f4c81;--bg:#e9edf2;--side:#ffffff;--ink:#1c2733;--acc:#0f4c81;--hl:#e8f1fa;--fs:17px}
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--ink)}
 header{position:fixed;top:0;left:0;right:0;height:52px;background:var(--bar);color:#fff;display:flex;align-items:center;gap:10px;padding:0 12px;z-index:30;box-shadow:0 1px 4px rgba(0,0,0,.25)}
@@ -47,6 +47,22 @@ a.leaf.cur .pg,nav summary.cur .golink{color:#dce8f3}
 }
 #totop{position:fixed;right:14px;bottom:18px;width:42px;height:42px;border-radius:50%;border:none;background:var(--bar);color:#fff;font-size:18px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .2s;z-index:15}
 body.scrolled #totop{opacity:.9;pointer-events:auto}
+/* layout toggle + font controls */
+.ctrl{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.5);color:#fff;font-size:12px;border-radius:6px;padding:4px 8px;cursor:pointer;white-space:nowrap;line-height:1}
+.ctrl:active{background:rgba(255,255,255,.32)}
+#fsgrp{display:none;gap:4px}
+body.reflow #fsgrp{display:inline-flex}
+/* reflow (EPUB-like) mode — scoped under .page so body.reflow class never self-hides */
+.page .reflow{display:none}
+body.reflow .page{max-width:780px;background:#fff;padding:24px 28px 34px}
+body.reflow .page img{display:none}
+body.reflow .page .reflow{display:block}
+body.reflow .pnum{position:static;display:inline-block;margin-top:16px;background:#8895a3}
+.page .reflow h2{font-size:calc(var(--fs) + 5px);color:var(--acc);margin:.1em 0 .7em;font-weight:700;border-bottom:2px solid #e0e8f0;padding-bottom:.25em}
+.page .reflow h3.note{font-size:calc(var(--fs) + 1px);color:#b45f06;margin:1.1em 0 .3em;font-weight:700}
+.page .reflow p{font-size:var(--fs);line-height:1.95;margin:.5em 0;text-align:justify;letter-spacing:.01em}
+.page .reflow .rfnote{font-size:12px;color:#98785a;background:#fbf3e8;border-left:3px solid #e0b070;border-radius:4px;padding:6px 10px;margin:.6em 0 1em;line-height:1.6}
+@media (max-width:900px){body.reflow .page{padding:16px 15px 24px}}
 </style>
 </head>
 <body>
@@ -54,6 +70,8 @@ body.scrolled #totop{opacity:.9;pointer-events:auto}
  <button id="menubtn" aria-label="目錄">☰</button>
  <h1>新北市EMTP SOP 2024</h1>
  <span id="cursec"></span>
+ <span id="fsgrp"><button id="fsdec" class="ctrl" aria-label="縮小字體">A−</button><button id="fsinc" class="ctrl" aria-label="放大字體">A＋</button></span>
+ <button id="modebtn" class="ctrl">文字版</button>
  <a id="pdfbtn" href="New_Taipei_EMTP_SOP_2024_bookmarked.pdf" download>下載PDF</a>
 </header>
 <div id="dim"></div>
@@ -557,6 +575,41 @@ document.getElementById('search').addEventListener('input',e=>{
   results.innerHTML=out.length?out.join(''):'<a>找不到「'+q.replace(/</g,'&lt;')+'」</a>';
  },250);
 });
+// ===== layout toggle: 原書(圖) / 文字(重排) =====
+const MODE_KEY='sop-mode', FS_KEY='sop-fs';
+const modebtn=document.getElementById('modebtn');
+const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+function curPage(){return +((location.hash.match(/\d+/)||[])[0]||1);}
+let reflowLoaded=false;
+async function loadReflow(){
+ if(reflowLoaded)return;
+ const data=await (await fetch('reflow.json')).json();
+ document.querySelectorAll('.page').forEach(sec=>{
+  const items=data[(+sec.dataset.n)-1]||[];
+  const div=document.createElement('div');div.className='reflow';
+  div.innerHTML=items.map(([t,s])=>{
+   const e=esc(s);
+   if(t==='h')return '<h2>'+e+'</h2>';
+   if(t==='n')return '<h3 class="note">'+e+'</h3>';
+   return '<p>'+e+'</p>';
+  }).join('')+'<div class="rfnote">⚠️ 文字版由 PDF 自動擷取重排，流程圖頁的方塊文字順序可能錯亂；判讀流程圖請切換回「原書版」。本頁 = 原書第 '+sec.dataset.n+' 頁。</div>';
+  sec.appendChild(div);
+ });
+ reflowLoaded=true;
+}
+async function setMode(m,keep){
+ if(m==='reflow'){modebtn.textContent='載入中…';await loadReflow();body.classList.add('reflow');modebtn.textContent='原書版';}
+ else{body.classList.remove('reflow');modebtn.textContent='文字版';}
+ localStorage.setItem(MODE_KEY,m);
+ if(keep){const el=document.getElementById('p'+keep);if(el)el.scrollIntoView();}
+}
+modebtn.onclick=()=>setMode(body.classList.contains('reflow')?'image':'reflow',curPage());
+// font size (reflow)
+function applyFs(px){document.documentElement.style.setProperty('--fs',px+'px');localStorage.setItem(FS_KEY,px);}
+let fs=+(localStorage.getItem(FS_KEY)||17);applyFs(fs);
+document.getElementById('fsdec').onclick=()=>{fs=Math.max(13,fs-1);applyFs(fs);};
+document.getElementById('fsinc').onclick=()=>{fs=Math.min(26,fs+1);applyFs(fs);};
+if(localStorage.getItem(MODE_KEY)==='reflow')setMode('reflow',curPage());
 </script>
 </body>
 </html>
